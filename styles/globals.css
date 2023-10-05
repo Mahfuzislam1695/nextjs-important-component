@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ease-in-out {
+  transition: all 0.3s ease-in-out;
+}
