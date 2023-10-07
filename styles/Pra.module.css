@@ -1,0 +1,13 @@
+.toggleDiv {
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.visible {
+  height: 100px;
+}
+
+.hidden {
+  height: 0;
+}
