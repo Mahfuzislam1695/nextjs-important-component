@@ -27,40 +27,40 @@ const Cro = () => {
             {/* <div className=" fixed bg-gradient-to-b from-gray-600 to-gray-100 opacity-75 inset-0 z-0 h-28 top-0"></div> */}
             {/* <div className=" fixed bg-gradient-to-b from-gray-200 to-gray-50 opacity-75 inset-0 z-0 h-28 top-0"></div> */}
 
-            <nav className=" p-4 fixed w-full">
-                <div className="">
+            <nav className=" p-4 fixed w-full ">
 
-                    <div className="container mx-auto">
-                        <div className="flex items-center justify-between">
-                            <div className=" font-bold text-lg">Logo</div>
-                            <div className="flex flex-col ">
 
-                                <div className={` ${styles.toggleDiv} ${isNavbarVisible ? styles.visible : styles.hidden}`}>
-                                    <div className="flex space-x-4 ">
-                                        <a href="#" className="text-white">
-                                            Home
-                                        </a>
+                <div className="container mx-auto border-b pb-2">
+                    <div className="flex items-center justify-between">
+                        <div className=" font-bold text-lg">Logo</div>
+                        <div className="flex flex-col ">
 
-                                        <a href="#" className="text-white">
-                                            About
-                                        </a>
+                            <div className={` ${styles.toggleDiv} ${isNavbarVisible ? styles.visible : styles.hidden}`}>
+                                <div className="flex space-x-4 ">
+                                    <a href="#" className="text-white">
+                                        Home
+                                    </a>
 
-                                        <a href="#" className="text-white">
-                                            Contact
-                                        </a>
-                                    </div>
+                                    <a href="#" className="text-white">
+                                        About
+                                    </a>
+
+                                    <a href="#" className="text-white">
+                                        Contact
+                                    </a>
                                 </div>
-
-                                <div className={`p-2`}>
-                                    <div className="flex space-x-4">
-                                        <a href="#" className="text-white">Another Link</a>
-                                        <a href="#" className="text-white">More Links</a>
-                                        <a href="#" className="text-white">Explore</a>
-                                    </div>
-                                </div>
-
                             </div>
+
+                            <div className={`p-2`}>
+                                <div className="flex space-x-4">
+                                    <a href="#" className="text-white">Another Link</a>
+                                    <a href="#" className="text-white">More Links</a>
+                                    <a href="#" className="text-white">Explore</a>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
             </nav >
