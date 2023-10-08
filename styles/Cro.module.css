@@ -34,17 +34,25 @@
 }
 
 .toggleDiv {
-  height: 26px;
+  height: 2rem;
   overflow: hidden;
   transition: height 0.4s ease;
 }
 
 .visible {
-  height: 26px;
+  height: 2rem;
 }
 
 .hidden {
   height: 0;
+}
+
+.dropdownContainer {
+  width: 100%; /* Set the width of the dropdown container */
+}
+
+.dropdown {
+  width: 100%; /* Set the width of each dropdown */
 }
 
 .visibleNav {
