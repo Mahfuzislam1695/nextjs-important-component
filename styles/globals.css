@@ -41,3 +41,186 @@ body {
 .ease-in-out {
   transition: all 0.3s ease-in-out;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.image {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  filter: blur(60px);
+  opacity: 0;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.section.active .image {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.greyish-layer {
+  position: fixed; /* Change to fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 0; /* Change z-index to be below the text and above the image */
+  pointer-events: none; /* Allow clicks to pass through the layer */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.section.active .image-container {
+  position: relative;
+  z-index: 1; /* Ensure the image is above the greyish layer */
+}
+
+.scrolling-text {
+  position: absolute; /* Set position to absolute */
+  top: 50%; /* Center vertically */
+
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-align: center; /* Center text horizontally */
+}
+
+.left {
+  left: 20%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both vertically and horizontally */
+}
+
+.right {
+  right: 20%; /* Center horizontally */
+  transform: translate(50%, -50%); /* Center both vertically and horizontally */
+}
+
+.center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section.active .scrolling-text {
+  opacity: 1;
+}
+
+button.next-section-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Increase the z-index to make it the topmost layer */
+}
+
+/* -----------  */
+
+/* .scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #4f46e5;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+} */
+
+.animation {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeAndSlide 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeAndSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggleDiv {
+  height: 2rem;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.visible {
+  height: 2rem;
+}
+
+.hidden {
+  height: 0;
+}
+
+.dropdownContainer {
+  width: 100%; /* Set the width of the dropdown container */
+}
+
+.dropdown {
+  width: 100%; /* Set the width of each dropdown */
+}
+
+.visibleNav {
+  /* transition: opacity 0.4s ease-in-out;
+  opacity: 1; */
+}
+
+.hiddenNav {
+  /* transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;  */
+}
+
+/* .stickyTop {
+  position: fixed;
+  top: 0;
+} */
+
+.stickyTop {
+  position: fixed;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.stickyTopHidden {
+  /* transform: translateY(
+    -100%
+  );  */
+}
